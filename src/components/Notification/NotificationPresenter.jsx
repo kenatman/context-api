@@ -53,10 +53,12 @@ const Button = styled.button`
   }
 `;
 
-const NotificationPresenter = ({ item }) => {
+const NotificationPresenter = ({
+  item,
+  checkNotification,
+  deleteNotification,
+}) => {
   const { id, text, seen } = item;
-  const checkNotification = useContext(store).checkNotification;
-  const deleteNotification = useContext(store).deleteNotification;
 
   return (
     <Notification seen={seen}>
